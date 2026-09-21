@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>bday ♡</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCREEN 1 — ENVELOPE / OPENING CARD
+═══════════════════════════════════════════════════════════ -->
+<section id="screen-envelope" class="screen active">
+
+  <!-- Floating hearts background -->
+  <div class="hearts-bg" id="heartsBg"></div>
+
+  <div class="envelope-wrapper" id="envelopeWrapper">
+
+    <!-- Envelope body -->
+    <div class="envelope" id="envelope">
+      <div class="env-back"></div>
+
+    <div class="intro-music-indicator" id="introMusicIndicator">
+  ♫ playing for you
+</div>
+      <!-- Flap -->
+      <div class="env-flap" id="envFlap"></div>
+
+      <!-- Front face -->
+      <div class="env-front">
+        <div class="env-seal" id="envSeal">
+          <span class="seal-heart">♡</span>
+        </div>
+      </div>
+   
+      <!-- Card that slides out -->
+      <div class="env-card" id="envCard">
+        <div class="env-card-inner">
+          <p class="card-pre">for</p>
+          <h1 class="card-name" id="cardName"></h1>
+          <div class="card-divider"></div>
+          <h2 class="card-heading" id="cardHeading"></h2>
+          <p class="card-sub" id="cardSub"></p>
+          <div class="card-roses">❦</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="tap-hint" id="tapHint">tap the seal to open ♡</p>
+  </div>
+
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCREEN 2 — GIFTS
+═══════════════════════════════════════════════════════════ -->
+<section id="screen-gifts" class="screen">
+
+  <div class="gifts-page">
+    <div class="gifts-top">
+      <p class="gifts-eyebrow">for you, with love</p>
+      <h2 class="gifts-heading">I got you a few things ♡</h2>
+      <p class="gifts-sub">choose one to open</p>
+    </div>
+
+    <div class="gifts-grid" id="giftsGrid">
+
+      <button class="gift-card" data-gift="letter">
+        <span class="gift-icon">💌</span>
+        <span class="gift-label">Message</span>
+        <span class="gift-desc">A few words from me</span>
+      </button>
+
+      <button class="gift-card" data-gift="flower">
+        <span class="gift-icon">💐</span>
+        <span class="gift-label">Flower</span>
+        <span class="gift-desc">Something pretty for you</span>
+      </button>
+
+      <button class="gift-card" data-gift="cake">
+        <span class="gift-icon">🎂</span>
+        <span class="gift-label">Cake</span>
+        <span class="gift-desc">Make a birthday wish</span>
+      </button>
+
+      <button class="gift-card" data-gift="anniversary">
+        <span class="gift-icon">💍</span>
+        <span class="gift-label">Our 1st Year</span>
+        <span class="gift-desc">365 days of us</span>
+      </button>
+
+      <button class="gift-card" data-gift="calendar">
+        <span class="gift-icon">🗓️</span>
+        <span class="gift-label">Our Date</span>
+        <span class="gift-desc">Find our special day</span>
+      </button>
+
+    </div>
+
+    <!-- Continue journey button -->
+    <button class="btn-continue" id="btnContinue">
+      continue the surprise →
+    </button>
+  </div>
+
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCREEN 3 — SCRAPBOOK / PHOTOS
+═══════════════════════════════════════════════════════════ -->
+<section id="screen-scrapbook" class="screen">
+  <div class="scrapbook-page">
+    <p class="scrapbook-eyebrow">our moments</p>
+    <h2 class="scrapbook-heading">A little album for you ♡</h2>
+    <div class="polaroid-grid" id="polaroidGrid"></div>
+    <button class="btn-continue" id="btnContinue2">keep going →</button>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCREEN 4 — MUSIC
+═══════════════════════════════════════════════════════════ -->
+<section id="screen-music" class="screen">
+  <div class="music-page">
+    <p class="music-eyebrow">playing just for you</p>
+    <h2 class="music-heading">This song reminds me of you</h2>
+
+    <div class="vinyl-wrapper">
+      <div class="vinyl-arm" id="vinylArm"></div>
+      <div class="vinyl-record" id="vinylRecord">
+        <div class="vinyl-label">
+          <p class="vinyl-title" id="vinylTitle"></p>
+          <p class="vinyl-artist" id="vinylArtist"></p>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-play" id="btnPlay">
+      <span class="play-icon" id="playIcon">▶</span>
+      <span id="playLabel">Play our song</span>
+    </button>
+    <p class="music-hint" id="musicHint"></p>
+
+    <audio id="audioPlayer" preload="auto" loop></audio>
+
+    <button class="btn-continue" id="btnContinue3">next →</button>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCREEN 5 — SECOND YEAR
+═══════════════════════════════════════════════════════════ -->
+<section id="screen-secondyear" class="screen">
+  <div class="secondyear-page">
+    <div class="secondyear-deco">❦</div>
+    <p class="secondyear-eyebrow" id="syEyebrow"></p>
+    <h2 class="secondyear-heading" id="syHeading"></h2>
+    <p class="secondyear-body" id="syBody"></p>
+    <div class="secondyear-hearts">
+      <span>♡</span><span>♡</span><span>♡</span>
+    </div>
+    <button class="btn-continue" id="btnContinue4">one last thing →</button>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCREEN 6 — FINAL
+═══════════════════════════════════════════════════════════ -->
+<section id="screen-final" class="screen">
+  <div class="final-page">
+
+    <div class="final-photo-wrap" id="finalPhotoWrap">
+      <div class="final-photo-frame" id="finalPhotoFrame">
+        <img id="finalPhoto" src="" alt="us ♡" />
+        <div class="final-photo-placeholder" id="finalPhotoPlaceholder">
+          <span>♡</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="final-text">
+      <p class="final-title-label" id="finalTitleLabel"></p>
+      <h1 class="final-heading" id="finalHeading"></h1>
+      <p class="final-sub" id="finalSub"></p>
+      <p class="final-message" id="finalMessage"></p>
+      <p class="final-signoff" id="finalSignoff"></p>
+    </div>
+
+    <!-- Hidden easter egg trigger -->
+    <div class="hidden-trigger" id="hiddenTrigger" title="♡">♡</div>
+    <div class="hidden-reveal" id="hiddenReveal">
+      <div class="hidden-inner" id="hiddenInner"></div>
+    </div>
+
+    <button class="btn-restart" id="btnRestart">↺ start over</button>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     MODALS
+═══════════════════════════════════════════════════════════ -->
+
+<!-- Letter modal -->
+<div class="modal-overlay" id="modalLetter" role="dialog" aria-modal="true">
+  <div class="modal letter-modal">
+    <button class="modal-close" data-modal="modalLetter">✕</button>
+    <div class="letter-paper">
+      <div class="letter-lines"></div>
+      <div class="letter-content">
+        <h3 class="letter-greeting" id="letterGreeting"></h3>
+        <div class="letter-body" id="letterBody"></div>
+        <p class="letter-signoff" id="letterSignoff"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Flower modal -->
+<div class="modal-overlay" id="modalFlower" role="dialog" aria-modal="true">
+  <div class="modal flower-modal">
+    <button class="modal-close" data-modal="modalFlower">✕</button>
+    <div class="flower-content">
+      <div class="flower-emoji">🌹</div>
+      <h3>For you, always.</h3>
+      <p class="flower-text">Every flower I see makes me think of you.<br>You make everything more beautiful. ♡</p>
+      <p class="flower-sig">— with love</p>
+    </div>
+  </div>
+</div>
+
+<!-- Cake modal -->
+<div class="modal-overlay" id="modalCake" role="dialog" aria-modal="true">
+  <div class="modal cake-modal">
+    <button class="modal-close" data-modal="modalCake">✕</button>
+    <div class="cake-content">
+      <div class="candles-row" id="candlesRow">
+        <span class="candle" data-lit="true">🕯️</span>
+        <span class="candle" data-lit="true">🕯️</span>
+        <span class="candle" data-lit="true">🕯️</span>
+      </div>
+      <div class="cake-emoji">🎂</div>
+      <h3 class="cake-heading">Make a wish, vengu ♡</h3>
+      <p class="cake-hint">Blow out the candles</p>
+      <button class="btn-blow" id="btnBlow">💨 Blow!</button>
+      <p class="cake-wish" id="cakeWish" style="display:none">Your wish is on its way ♡</p>
+    </div>
+  </div>
+</div>
+
+<!-- Anniversary modal -->
+<div class="modal-overlay" id="modalAnniversary" role="dialog" aria-modal="true">
+  <div class="modal anniversary-modal">
+    <button class="modal-close" data-modal="modalAnniversary">✕</button>
+    <div class="anniv-content">
+      <p class="anniv-eyebrow">22 september 2025 → 22 september 2026</p>
+      <h3 class="anniv-heading" id="annivHeading"></h3>
+      <p class="anniv-sub" id="annivSub"></p>
+
+      <div class="story-blocks" id="storyBlocks"></div>
+
+      <div class="memory-cards" id="memoryCards"></div>
+
+      <div class="anniv-quote">
+        <p class="anniv-quote-label">one year with you means</p>
+        <p class="anniv-quote-text" id="annivQuote"></p>
+      </div>
+      <div class="anniv-quote" style="margin-top:1rem">
+        <p class="anniv-quote-label">one moment I'd relive</p>
+        <p class="anniv-quote-text" id="annivMoment"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Calendar modal -->
+<div class="modal-overlay" id="modalCalendar" role="dialog" aria-modal="true">
+  <div class="modal calendar-modal">
+    <button class="modal-close" data-modal="modalCalendar">✕</button>
+    <div class="cal-content">
+      <h3 class="cal-month">September 2026</h3>
+      <div class="cal-grid" id="calGrid"></div>
+      <p class="cal-note">♡ September 22 — our birthday &amp; our first anniversary ♡</p>
+    </div>
+  </div>
+</div>
+
+<!-- Floating hearts container (modals & transitions) -->
+<div class="floating-hearts" id="floatingHearts"></div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
